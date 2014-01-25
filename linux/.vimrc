@@ -19,6 +19,9 @@ set softtabstop=2
 set list listchars=tab:\ \ ,trail:\
 highlight SpecialKey ctermbg=Yellow guibg=Yellow
 
+" Strip trailing whitespace on save.
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Highlight lines over 80 chars.
 highlight OverLength ctermbg=red ctermfg=white guibg=#59292
 match OverLength /\%81v.\+/
@@ -35,3 +38,6 @@ endif
 
 " Change leader to ','.
 let mapleader = ','
+
+" Check ~/.vim/skel/tmpl.* for new file template.
+autocmd! BufNewFile * silent! 0r ~/.vim/skel/tpl.%:e

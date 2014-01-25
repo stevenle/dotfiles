@@ -17,7 +17,7 @@ cp \
   $cwd/.vimrc \
   $cwd/.tmux.conf \
   $HOME
-mkdir -p $HOME/.vim/backups $HOME/.vim/swaps $HOME/.vim/undo
+cp -R $cwd/.vim $HOME
 
 # Set up go.
 mkdir -p $HOME/go/src
