@@ -3,6 +3,8 @@
   c = commit
   co = checkout
   d = diff
+  e = push origin master
+  export = push origin master
   s = status
   undo = checkout --
   undolastcommit = reset --soft "HEAD^"
