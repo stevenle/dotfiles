@@ -13,6 +13,7 @@ cp \
   $cwd/.bash_aliases \
   $cwd/.bashrc \
   $cwd/.gitconfig \
+  $cwd/.inputrc \
   $cwd/.vimrc \
   $cwd/.tmux.conf \
   $HOME
