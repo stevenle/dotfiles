@@ -1,0 +1,13 @@
+[alias]
+  b = branch
+  c = commit
+  co = checkout
+  d = diff
+  s = status
+  undo = checkout --
+  undolastcommit = reset --soft "HEAD^"
+  unstage = reset HEAD --
+
+[user]
+  email = stevenle08@gmail.com
+  name = Steven Le
