@@ -1,4 +1,7 @@
+" Pathogen.
+execute pathogen#infect()
 syntax on
+filetype plugin indent on
 
 " Ignore case of searches.
 set ignorecase

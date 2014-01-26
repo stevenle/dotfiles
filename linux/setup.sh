@@ -17,7 +17,11 @@ cp \
   $cwd/.vimrc \
   $cwd/.tmux.conf \
   $HOME
+
+# Set up vim.
 cp -R $cwd/.vim $HOME
+curl -Sso ~/.vim/autoload/pathogen.vim \
+  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 # Set up go.
 mkdir -p $HOME/go/src
