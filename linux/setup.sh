@@ -9,14 +9,18 @@ sudo apt-get install git-core golang tmux vim
 cd "$(dirname "$0")"
 cwd=$(pwd -P)
 
-ln -s \
+linkhome() {
+  rm $@
+  ln -s $@ $HOME
+}
+
+linkhome \
   $cwd/.bash_aliases \
   $cwd/.bashrc \
   $cwd/.gitconfig \
   $cwd/.inputrc \
   $cwd/.vimrc \
-  $cwd/.tmux.conf \
-  $HOME
+  $cwd/.tmux.conf
 
 # Set up vim.
 mkdir -p \
