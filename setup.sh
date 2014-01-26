@@ -1,13 +1,11 @@
 #!/bin/sh
 
-sudo apt-get install python-software-properties
-sudo add-apt-repository ppa:duh/golang
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git-core golang tmux vim
-
 cd "$(dirname "$0")"
 cwd=$(pwd -P)
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install tmux vim
 
 forcelink() {
   for arg in "$@"; do
@@ -19,6 +17,7 @@ forcelink() {
   ln -s $@ $HOME
 }
 
+# Symlink dotfiles into home dir.
 forcelink \
   $cwd/.bash_aliases \
   $cwd/.bashrc \
@@ -26,6 +25,8 @@ forcelink \
   $cwd/.inputrc \
   $cwd/.vimrc \
   $cwd/.tmux.conf
+
+exit
 
 # Set up vim.
 mkdir -p \
@@ -40,9 +41,15 @@ ln -s \
   $HOME/.vim
 curl -Sso ~/.vim/autoload/pathogen.vim \
   https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+# Install vim pathogen plugins.
 cd $HOME/.vim/bundle
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/jnwhiteh/vim-golang.git
 
-# Set up go.
+# Set up golang.
+# TODO(stevenle): Install from source.
+sudo add-apt-repository ppa:duh/golang
+sudo apt-get update
+sudo apt-get install golang
 mkdir -p $HOME/go/src
