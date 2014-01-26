@@ -9,12 +9,17 @@ sudo apt-get install git-core golang tmux vim
 cd "$(dirname "$0")"
 cwd=$(pwd -P)
 
-linkhome() {
-  rm $@
+forcelink() {
+  for arg in "$@"; do
+    path=$HOME/$(basename $arg)
+    if [ -e "$path" ]; then
+      rm $path
+    fi
+  done
   ln -s $@ $HOME
 }
 
-linkhome \
+forcelink \
   $cwd/.bash_aliases \
   $cwd/.bashrc \
   $cwd/.gitconfig \
