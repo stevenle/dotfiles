@@ -30,9 +30,9 @@ forcelink \
 # Set up vim.
 mkdir -p \
   $HOME/.vim/autoload \
-  $HOME/.vim/backup \
+  $HOME/.vim/backups \
   $HOME/.vim/bundle \
-  $HOME/.vim/swap \
+  $HOME/.vim/swaps \
   $HOME/.vim/undo
 ln -s \
   $cwd/.vim/skel \
