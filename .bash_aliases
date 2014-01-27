@@ -1,6 +1,6 @@
 # Common.
 alias g='git'
-alias gr='grep -n -R -i'
+alias gr='grep --color=always -n -R -i'
 alias gti='git'
 alias killbg='kill %%'
 alias l='ls --color -lh'

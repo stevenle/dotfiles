@@ -48,8 +48,8 @@ git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/jnwhiteh/vim-golang.git
 
 # Set up golang.
-# TODO(stevenle): Install from source.
-sudo add-apt-repository ppa:duh/golang
-sudo apt-get update
-sudo apt-get install golang
-mkdir -p $HOME/go/src
+mkdir -p $HOME/go/src /tmp/golang
+cd /tmp/golang
+curl -O https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz
+tar xvzf go1.2.linux-amd64.tar.gz
+sudo mv go /usr/local/go
