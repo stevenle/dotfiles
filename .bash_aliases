@@ -14,3 +14,8 @@ alias vim='vim -X'
 alias s='tmux ls'
 alias sr='tmux a -d -t'
 alias ss='tmux new -s'
+
+# Go to root of git dir.
+g3() {
+  cd $(git rev-parse --show-cdup)
+}

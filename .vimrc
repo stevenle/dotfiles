@@ -17,6 +17,10 @@ set incsearch
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+" Except go.
+autocmd Filetype go setlocal noexpandtab
+autocmd Filetype go setlocal nolist
+autocmd Filetype go setlocal tabstop=2
 
 " Highlight whitespace.
 set list listchars=tab:\ \ ,trail:\
