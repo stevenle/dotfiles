@@ -13,3 +13,6 @@
 [user]
   email = stevenle08@gmail.com
   name = Steven Le
+
+[color]
+  ui = true
