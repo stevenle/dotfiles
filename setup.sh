@@ -26,8 +26,6 @@ forcelink \
   $cwd/.vimrc \
   $cwd/.tmux.conf
 
-exit
-
 # Set up vim.
 mkdir -p \
   $HOME/.vim/autoload \
