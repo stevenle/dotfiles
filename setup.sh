@@ -37,8 +37,7 @@ ln -s \
   $cwd/.vim/skel \
   $cwd/.vim/snippets \
   $HOME/.vim
-curl -Sso ~/.vim/autoload/pathogen.vim \
-  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Install vim pathogen plugins.
 cd $HOME/.vim/bundle
