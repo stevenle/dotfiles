@@ -1,11 +1,13 @@
 #!/bin/sh
 
+set -e
+
 cd "$(dirname "$0")"
 cwd=$(pwd -P)
 
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install tmux vim
+sudo apt-get install curl tmux vim
 
 forcelink() {
   for arg in "$@"; do
