@@ -49,6 +49,6 @@ git clone https://github.com/jnwhiteh/vim-golang.git
 # Set up golang.
 mkdir -p $HOME/go/src /tmp/golang
 cd /tmp/golang
-curl -O http://golang.org/dl/go1.2.2.linux-amd64.tar.gz
-tar xvzf go1.2.linux-amd64.tar.gz
+curl -O http://golang.org/dl/go1.3.linux-amd64.tar.gz
+tar xvzf go1.3.linux-amd64.tar.gz
 sudo mv go /usr/local/go
