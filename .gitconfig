@@ -4,7 +4,7 @@
   co = checkout
   d = diff
   e = push origin master
-  export = push origin master
+  export = push -u origin master
   s = status
   undo = checkout --
   undolastcommit = reset --soft "HEAD^"
