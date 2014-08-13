@@ -6,8 +6,8 @@ cd "$(dirname "$0")"
 cwd=$(pwd -P)
 
 sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install curl tmux vim
+sudo apt-get upgrade -y
+sudo apt-get install -y curl tmux vim
 
 forcelink() {
   for arg in "$@"; do
@@ -49,6 +49,6 @@ git clone https://github.com/jnwhiteh/vim-golang.git
 # Set up golang.
 mkdir -p $HOME/go/src /tmp/golang
 cd /tmp/golang
-curl -O -L http://golang.org/dl/go1.3.linux-amd64.tar.gz
-tar xvzf go1.3.linux-amd64.tar.gz
+curl -O -L https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz
+tar xvzf go1.3.1.linux-amd64.tar.gz
 sudo mv go /usr/local/go
