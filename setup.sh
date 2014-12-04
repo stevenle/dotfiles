@@ -36,6 +36,7 @@ mkdir -p \
   $HOME/.vim/swaps \
   $HOME/.vim/undo
 ln -s \
+  $cwd/.vim/after \
   $cwd/.vim/skel \
   $cwd/.vim/snippets \
   $HOME/.vim
@@ -44,11 +45,3 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 # Install vim pathogen plugins.
 cd $HOME/.vim/bundle
 git clone https://github.com/kien/ctrlp.vim.git
-git clone https://github.com/jnwhiteh/vim-golang.git
-
-# Set up golang.
-mkdir -p $HOME/go/src /tmp/golang
-cd /tmp/golang
-curl -O -L https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz
-tar xvzf go1.3.1.linux-amd64.tar.gz
-sudo mv go /usr/local/go
