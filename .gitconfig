@@ -1,4 +1,5 @@
 [alias]
+  amend = commit --amend
   b = branch
   c = commit
   co = checkout
