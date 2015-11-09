@@ -7,7 +7,7 @@ cwd=$(pwd -P)
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y curl tmux vim
+sudo apt-get install -y curl vim
 
 forcelink() {
   for arg in "$@"; do
