@@ -44,4 +44,4 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Install vim pathogen plugins.
 cd $HOME/.vim/bundle
-git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
