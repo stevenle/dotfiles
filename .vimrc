@@ -17,7 +17,10 @@ set incsearch
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-" Except go.
+" Use 4 spaces for Python.
+autocmd Filetype python setlocal shiftwidth=4
+autocmd Filetype python setlocal softtabstop=4
+" Use regular tabs for Go.
 autocmd Filetype go setlocal noexpandtab
 autocmd Filetype go setlocal nolist
 autocmd Filetype go setlocal tabstop=2
