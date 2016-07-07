@@ -114,5 +114,5 @@ export EDITOR=/usr/bin/vim
 
 # Configure go.
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
+export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin

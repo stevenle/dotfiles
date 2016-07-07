@@ -51,3 +51,6 @@ let mapleader = ','
 
 " Check ~/.vim/skel/tmpl.* for new file template.
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tpl.%:e
+
+" vim-go.
+let g:go_template_autocreate = 0
