@@ -1,6 +1,7 @@
 [alias]
   amend = commit --amend
   b = branch
+  blinkk = !git config user.email "s@blinkk.com"
   c = commit
   co = checkout
   d = diff
