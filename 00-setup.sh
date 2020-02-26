@@ -2,13 +2,6 @@
 
 set -e
 
-cd "$(dirname "$0")"
-cwd=$(pwd -P)
-
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install -y curl vim
-
 forcelink() {
   for arg in "$@"; do
     path=$HOME/$(basename $arg)
@@ -21,10 +14,7 @@ forcelink() {
 
 # Symlink dotfiles into home dir.
 forcelink \
-  $cwd/.bash_aliases \
-  $cwd/.bashrc \
   $cwd/.gitconfig \
-  $cwd/.inputrc \
   $cwd/.vimrc \
   $cwd/.tmux.conf
 
@@ -41,6 +31,12 @@ ln -s \
   $cwd/.vim/snippets \
   $HOME/.vim
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Copy scripts to $HOME/bin.
+mkdir -p $HOME/bin/.grow-versions
+ln -s \
+  bin/install-grow.sh \
+  $HOME/bin
 
 # Install vim pathogen plugins.
 cd $HOME/.vim/bundle

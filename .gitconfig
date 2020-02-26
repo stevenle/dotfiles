@@ -8,7 +8,10 @@
   e = !git export
   export = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
   google = !git config user.email "stevenle@google.com"
+  rebase-origin = !git fetch && git rebase origin/$(git rev-parse --abbrev-ref HEAD)
   rebase-master = !git fetch && git rebase -i origin/master
+  rb = !git rebase-origin
+  rbm = !git rebase-master
   s = status
   sync = !git pull && git submodule foreach git pull
   undo = checkout --
@@ -21,3 +24,7 @@
 
 [color]
   ui = true
+[http]
+	cookiefile = /Users/stevenle/.gitcookies
+[pager]
+	branch = false
