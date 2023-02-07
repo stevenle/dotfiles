@@ -1,9 +1,9 @@
-export PATH="$HOME/bin:$GOROOT/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 export EDITOR="vim"
+export PATH="$HOME/bin:$GOROOT/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 export ZSH="/Users/stevenle/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
+ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # Search history using up/down arrows.
