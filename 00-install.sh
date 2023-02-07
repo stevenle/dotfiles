@@ -2,23 +2,25 @@
 
 set -e
 
-forcelink() {
+symlink() {
   for arg in "$@"; do
     path=$HOME/$(basename $arg)
-    if [ -e "$path" ]; then
-      rm $path
-    fi
+    rm -f $path
   done
   ln -s $@ $HOME
 }
 
 # Symlink dotfiles into home dir.
-forcelink \
-  $cwd/.gitconfig \
-  $cwd/.vimrc \
-  $cwd/.tmux.conf
+symlink \
+  $PWD/.gitconfig \
+  $PWD/.vimrc \
+  $PWD/.tmux.conf
+
+mkdir -p $HOME/.zsh
+cp $PWD/.zsh/*.zsh $HOME/.zsh
 
 # Set up vim.
+rm -rf $HOME/.vim
 mkdir -p \
   $HOME/.vim/autoload \
   $HOME/.vim/backups \
@@ -26,17 +28,15 @@ mkdir -p \
   $HOME/.vim/swaps \
   $HOME/.vim/undo
 ln -s \
-  $cwd/.vim/after \
-  $cwd/.vim/skel \
-  $cwd/.vim/snippets \
+  $PWD/.vim/after \
+  $PWD/.vim/skel \
+  $PWD/.vim/snippets \
   $HOME/.vim
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Copy scripts to $HOME/bin.
-mkdir -p $HOME/bin/.grow-versions
-ln -s \
-  bin/install-grow.sh \
-  $HOME/bin
+mkdir -p $HOME/bin
+cp $PWD/bin/* $HOME/bin
 
 # Install vim pathogen plugins.
 cd $HOME/.vim/bundle

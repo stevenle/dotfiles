@@ -12,6 +12,7 @@
   rebase-master = !git fetch && git rebase -i origin/master
   rb = !git rebase-origin
   rbm = !git rebase-master
+  root = rev-parse --show-toplevel
   s = status
   sync = !git pull && git submodule foreach git pull
   undo = checkout --
@@ -24,7 +25,15 @@
 
 [color]
   ui = true
+
 [http]
-	cookiefile = /Users/stevenle/.gitcookies
+  cookiefile = /Users/stevenle/.gitcookies
+
 [pager]
-	branch = false
+  branch = false
+
+[pull]
+  ff = only
+
+[init]
+  defaultBranch = main

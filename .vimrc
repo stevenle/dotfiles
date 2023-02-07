@@ -33,8 +33,8 @@ highlight SpecialKey ctermbg=Yellow guibg=Yellow
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Highlight lines over 80 chars.
-highlight OverLength ctermbg=red ctermfg=white guibg=#59292
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#59292
+" match OverLength /\%81v.\+/
 
 " Toggle set paste.
 set pastetoggle=<F3>
