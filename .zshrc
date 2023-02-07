@@ -27,3 +27,4 @@ loadzsh $HOME/.zsh/gcloud.zsh
 loadzsh $HOME/.zsh/golang.zsh
 loadzsh $HOME/.zsh/java.zsh
 loadzsh $HOME/.zsh/nodejs.zsh
+loadzsh $HOME/.zsh/secrets.zsh
