@@ -1,5 +1,5 @@
+# Aliases.
 alias g='git'
-# alias g3='cd $(git rev-parse --show-cdup)'
 alias g3='cd $(~/bin/find_parent_dir.py package.json)'
 alias g4='cd $(git rev-parse --show-cdup)'
 alias git-root='cd $(git root)'
@@ -21,5 +21,4 @@ alias sr='tmux a -d -t'
 alias ss='tmux new -s'
 alias unbz2='tar xvjf'
 alias untar='tar xvf'
-alias up='cd $(~/bin/find_parent_dir.py pnpm-workspace.yaml)'
 alias vim='vim -X'
