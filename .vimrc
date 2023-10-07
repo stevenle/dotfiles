@@ -1,7 +1,9 @@
 " Pathogen.
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
+
+set maxmem=536870912
+" syntax on
 
 " Ignore case of searches.
 set ignorecase

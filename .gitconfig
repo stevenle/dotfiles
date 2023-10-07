@@ -37,3 +37,9 @@
 
 [init]
   defaultBranch = main
+
+[log]
+  date = local
+
+[oh-my-zsh]
+  hide-dirty = 1
