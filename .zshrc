@@ -17,7 +17,7 @@ bindkey "^[[B" down-line-or-beginning-search # Dow
 loadzsh() {
   configpath="$1"
   if [ -f "$configpath" ]; then
-    echo "📦 $configpath"
+    # echo "📦 $configpath"
     source "$configpath"
   fi
 }
@@ -29,4 +29,4 @@ loadzsh $HOME/.zsh/golang.zsh
 loadzsh $HOME/.zsh/java.zsh
 loadzsh $HOME/.zsh/nodejs.zsh
 loadzsh $HOME/.zsh/secrets.zsh
-clear
+# clear
